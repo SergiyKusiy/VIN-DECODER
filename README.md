@@ -1,8 +1,8 @@
-# VIN Decoder
+VIN Decoder 🚗🔍
 
-A web application for decoding vehicle VIN codes using the NHTSA open API.
+A modern web app for decoding vehicle VIN codes using the NHTSA vPIC API.
 
-🔗 **[Live Demo](https://your-app.netlify.app)** | [GitHub](https://github.com/SergiyKusiy/VIN-DECODER)
+🔗 **[Live Demo](https://vin-inspector.netlify.app/)** | [GitHub](https://github.com/SergiyKusiy/VIN-DECODER)
 
 ## Features
 
@@ -26,14 +26,3 @@ A web application for decoding vehicle VIN codes using the NHTSA open API.
 - SCSS Modules
 - Vite
 - NHTSA vPIC API
-
-## Local Setup
-
-```bash
-git clone https://github.com/your-username/vin-decoder.git
-cd vin-decoder
-npm install
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
