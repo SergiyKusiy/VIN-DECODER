@@ -1,0 +1,58 @@
+@import "@/styles/variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  background-color: $bg-base;
+  color: $text-primary;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-display;
+  color: $text-primary;
+}
+
+button {
+  font-family: $font-body;
+}
+
+input {
+  font-family: $font-body;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-surface;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $bg-overlay;
+  border-radius: 3px;
+
+  &:hover {
+    background: $color-primary-dark;
+  }
+}

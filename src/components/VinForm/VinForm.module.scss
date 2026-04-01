@@ -1,0 +1,84 @@
+@import "@/styles/variables";
+
+.form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 20px;
+  background: $bg-elevated;
+  border: 1px solid $border-default;
+  border-radius: 16px;
+  box-shadow: $shadow-card;
+  transition: border-color 0.25s ease;
+
+  &:focus-within {
+    border-color: $border-active;
+  }
+}
+
+.input {
+  flex: 1 1 250px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-family: $font-mono;
+  letter-spacing: 0.08em;
+  color: $text-primary;
+  background: $bg-surface;
+  border: 1px solid $border-subtle;
+  border-radius: 10px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: $text-muted;
+    letter-spacing: 0.02em;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    box-shadow: $glow-primary-sm;
+  }
+}
+
+.button {
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(135deg, $color-primary-dark, $color-primary);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: $glow-primary;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.error {
+  width: 100%;
+  font-size: 0.85rem;
+  color: $color-error;
+  padding: 0 4px;
+}
+
+@media (max-width: 420px) {
+  .input,
+  .button {
+    width: 100%;
+    flex: unset;
+  }
+}

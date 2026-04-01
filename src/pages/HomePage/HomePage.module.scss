@@ -1,0 +1,37 @@
+@import "@/styles/variables";
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.title {
+  font-family: $font-display;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $text-primary;
+  margin-bottom: 32px;
+
+  span {
+    color: $color-primary-light;
+  }
+}
+
+.error {
+  font-size: 0.875rem;
+  color: $color-error;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.loading {
+  font-size: 0.875rem;
+  color: $text-muted;
+  text-align: center;
+  margin-top: 12px;
+  font-family: $font-mono;
+  letter-spacing: 0.05em;
+}

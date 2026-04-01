@@ -1,0 +1,64 @@
+@import "@/styles/variables";
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  background: $bg-surface;
+  border-bottom: 1px solid $border-default;
+  box-shadow: $shadow-header;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navContainer {
+  background: $bg-elevated;
+  padding: 6px;
+  border-radius: 100px;
+  border: 1px solid $border-default;
+}
+
+.nav {
+  display: flex;
+  position: relative;
+  gap: 4px;
+}
+
+.link {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  color: $text-secondary;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 100px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.active {
+  color: $text-primary !important;
+}
+
+.indicator {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, $color-primary-dark, $color-primary);
+  border-radius: 100px;
+  box-shadow: $glow-primary-sm;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+}

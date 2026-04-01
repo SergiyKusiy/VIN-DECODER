@@ -1,20 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
-
-const HomePage = () => <h1>Home</h1>;
-const VariablesPage = () => <h1>Variables</h1>;
-const VariableDetailsPage = () => <h1>Variable Details</h1>;
+import { HomePage } from "@/pages/HomePage/HomePage";
+import { VariablesPage } from "@/pages/VariablesPage/VariablesPage";
+import { VariableDetailsPage } from "@/pages/VariableDetailsPage/VariableDetailsPage";
+import { Layout } from "@/components/Layout/Layout";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/variables",
-    element: <VariablesPage />,
-  },
-  {
-    path: "/variables/:id",
-    element: <VariableDetailsPage />,
+    element: <Layout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/variables", element: <VariablesPage /> },
+      { path: "/variables/:id", element: <VariableDetailsPage /> },
+    ],
   },
 ]);
