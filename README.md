@@ -1,28 +1,65 @@
-VIN Decoder 🚗🔍
+🚗 VIN Decoder
 
-A modern web app for decoding vehicle VIN codes using the NHTSA vPIC API.
+A modern Single Page Application (SPA) for decoding vehicle VIN codes using the NHTSA vPIC API.
 
-🔗 **[Live Demo](https://vin-inspector.netlify.app/)** | [GitHub](https://github.com/SergiyKusiy/VIN-DECODER)
+🔗 Live Demo: https://vin-inspector.netlify.app/
 
-## Features
+📂 GitHub: https://github.com/SergiyKusiy/VIN-DECODER
 
-- Decode any 17-character VIN code and view detailed vehicle information
-- Form validation — empty field, max 17 characters, invalid characters
-- History of the last 3 decoded VINs with one-click re-decode
-- Browse all available NHTSA vehicle variables with descriptions
-- Responsive layout from 420px to 1440px
-- Dark tech theme with blue accent
+✨ Overview
 
-## Pages
+This application allows users to decode a vehicle VIN (Vehicle Identification Number) and view detailed information such as manufacturer, model, year, and other specifications.
 
-- `/` — VIN input form, recent history, decode results
-- `/variables` — list of all vehicle variables
-- `/variables/:id` — detailed description of a specific variable
+The app also provides a full list of available vehicle variables with descriptions.
 
-## Tech Stack
+⚙️ Features
+🔍 Decode any 17-character VIN code
+✅ Form validation:
+required field
+max 17 characters
+allowed characters only
+🕘 Search history (last 3 VINs using localStorage)
+📊 Display only meaningful decoded data (filtered results)
+📚 Browse all vehicle variables
+📄 View detailed info for each variable
+📱 Fully responsive layout (420px–1440px)
+🎨 Custom cyberpunk pink UI theme
+🧭 Pages
+Route Description
+/ VIN input, history, decoded results
+/variables List of all vehicle variables
+/variables/:id Variable details
+🛠️ Tech Stack
+React + TypeScript
+React Router
+SCSS Modules
+Vite
+NHTSA vPIC API
+🚀 Getting Started (Local Setup)
 
-- React 18 + TypeScript
-- React Router v6
-- SCSS Modules
-- Vite
-- NHTSA vPIC API
+1. Clone the repository
+   git clone https://github.com/SergiyKusiy/VIN-DECODER.git
+   cd VIN-DECODER
+2. Install dependencies
+   npm install
+3. Run the app
+   npm run dev
+
+App will be available at:
+
+http://localhost:5173
+📦 Build
+npm run build
+🌐 Deployment
+
+The application is deployed using Netlify.
+
+Build command: npm run build
+Publish directory: dist
+📌 Notes
+Uses public NHTSA API, no API key required
+SPA routing handled via \_redirects configuration for Netlify
+👨‍💻 Author
+
+Serhii Kusyi
+GitHub: https://github.com/SergiyKusiy
